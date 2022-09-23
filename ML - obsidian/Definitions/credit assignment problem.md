@@ -1,0 +1,2 @@
+# Credit assignment problem
+Credit assignment is a fundamental problem in reinforcement learning, **the problem of measuring an action's influence on future rewards**. Explicit credit assignment methods have the potential to boost the performance of RL algorithms on many tasks, but thus far remain impractical for general use
