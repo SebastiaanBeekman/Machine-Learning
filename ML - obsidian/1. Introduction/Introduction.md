@@ -3,7 +3,8 @@ The problem of searching for patterns in data is a fundamental one and has a lon
 
 Consider the example of recognizing handwritten digits, illustrated in the figure below. Each digit corresponds to a 28×28 pixel image and so can be represented by a vector *x* comprising 784 real numbers. The goal is to build a machine that will take such a vector *x* as input and that will produce the identity of the digit as the output. This is a nontrivial problem due to the wide variability of handwriting. It could be tackled using handcrafted rules or heuristics for distinguishing the digits based on the shapes of the strokes, but in practice such an approach leads to a proliferation of rules and of exceptions to the rules and so on, and invariably gives poor results.
 
-![[Pasted image 20220920150749.png]]
+![[Figure 1.1.png]]
+[[Figure 1.1.png|Figure 1.1]]
 
 Far better results can be obtained by adopting a machine learning approach in which a large set of N digits {x1, . . . , xn} called a [[training set]] is used to tune the parameters of an adaptive model. The categories of the digits in the training set are known in advance, typically by inspecting them individually and hand-labelling them. We can express the category of a digit using [[target vector]] t, which represents the identity of the corresponding digit.
 
