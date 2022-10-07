@@ -1,1 +1,22 @@
 # Decision Theory
+We have seen in [[1. Probability densities|Section 1.2]] how probability theory provides us with a consistent mathematical framework for quantifying and manipulating uncertainty. Here we turn to a discussion of decision theory that, when combined with probability theory, allows us to make optimal decisions in situations involving uncertainty such as those encountered in pattern recognition.
+
+Suppose we have an input vector **x** together with a corresponding vector **t** of target variables, and our goal is to predict **t** given a new value for **x**. For regression problems, **t** will comprise continuous variables, whereas for classification problems **t** will represent class labels. The joint [[probability distribution]] *p(**x**, **t**)* provides a complete summary of the uncertainty associated with these variables. Determination of *p(**x**, **t**)* from a set of training data is an example of [[inference]] and is typically a very difficult problem whose solution forms the subject of much of this book. In
+a practical application, however, we must often make a specific prediction for thevalue of **t**, or more generally take a specific action based on our understanding of thevalues **t** is likely to take, and this aspect is the subject of decision theory.
+
+Consider, for example, a medical diagnosis problem in which we have taken an X-ray image of a patient, and we wish to determine whether the patient has cancer or not. In this case, the input vector **x** is the set of pixel intensities in the image, and output variable t will represent the presence of cancer, which we denote by the class C1, or the absence of cancer, which we denote by the class C2. We might, for instance, choose t to be a binary variable such that t = 0 corresponds to class C1 and t = 1 corresponds to class C2. We shall see later that this choice of label values is particularly convenient for probabilistic models. The general inference problem then involves determining the joint distribution p(x, Ck), or equivalently p(x, t), which gives us the most complete probabilistic description of the situation. Although this can be a very useful and informative quantity, in the end we must decide either to give treatment to the patient or not, and we would like this choice to be optimal in some appropriate sense (Duda and Hart, 1973). This is the decision step, and it is the subject of decision theory to tell us how to make optimal decisions given the appropriate probabilities. We shall see that the decision stage is generally very simple, even trivial, once we have solved the inference problem.
+
+Here we give an introduction to the key ideas of decision theory as required for the rest of the book. Further background, as well as more detailed accounts, can be found in Berger (1985) and Bather (2000).
+
+Before giving a more detailed analysis, let us first consider informally how we might expect probabilities to play a role in making decisions. When we obtain the X-ray image x for a new patient, our goal is to decide which of the two classes to assign to the image. We are interested in the probabilities of the two classes given the image, which are given by p(Ck|x). Using Bayes’ theorem, these probabilities can be expressed in the form
+$$
+p(C_k|x) = \frac{p(x|C_k)p(C_k)}{p(x)}
+\tag{1.77}
+$$
+Note that any of the quantities appearing in Bayes’ theorem can be obtained from the joint distribution p(x, Ck) by either marginalizing or conditioning with respect to the appropriate variables. We can now interpret p(Ck) as the prior probability for the class Ck, and p(Ck|x) as the corresponding posterior probability. Thus p(C1) represents the probability that a person has cancer, before we take the X-ray measurement. Similarly, p(C1|x) is the corresponding probability, revised using Bayes’ theorem in light of the information contained in the X-ray. If our aim is to minimize the chance of assigning x to the wrong class, then intuitively we would choose the class having the higher posterior probability. We now show that this intuition is correct, and we also discuss more general criteria for making decisions.
+
+## Index
+- [[1. Minimizing the misclassification rate]]
+- [[2. Minimizing the expected loss]]
+- [[3. The reject option]]
+- [[4. Inference and decision]]
