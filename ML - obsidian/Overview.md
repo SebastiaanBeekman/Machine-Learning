@@ -1,6 +1,6 @@
 # Overview
 - [[Introduction]]
-- [[Probability distributions]]
+- [[Probability Distributions]]
 - [[Linear Models for Regression]]
 - [[Linear Models for Classifiction]]
 - [[Neural Networks]]

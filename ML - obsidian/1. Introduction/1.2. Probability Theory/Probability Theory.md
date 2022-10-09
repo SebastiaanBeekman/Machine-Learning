@@ -71,3 +71,4 @@ Finally, we note that if the joint distribution of two variables factorizes into
 ## Index
 - [[1. Probability densities]]
 - [[2. Expectations and covariances]]
+- [[3. Bayesian probabilities]]
