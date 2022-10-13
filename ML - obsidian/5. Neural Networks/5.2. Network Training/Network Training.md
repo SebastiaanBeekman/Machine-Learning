@@ -113,9 +113,6 @@ regression case.
 It is interesting to contrast the neural network solution to this problem with the
 corresponding approach based on a linear classification model of the kind discussed in [[Chapter 4]]. Suppose that we are using a standard two-layer network of the kind shown in [[Figure 5.1.png|Figure 5.1]]. We see that the weight parameters in the first layer of the network are shared between the various outputs, whereas in the linear model each classification problem is solved independently. The first layer of the network can be viewed as performing a nonlinear feature extraction, and the sharing of features between the different outputs can save on computation and can also lead to improved generalization.
 
-![[Figure 5.1.png]]
-[[Figure 5.1.png|Figure 5.1]]
-
 Finally, we consider the standard multiclass classification problem in which each
 input is assigned to one of *K* mutually exclusive classes. The binary target variables
 $t_k \in \{0, 1\}$ have a 1-of-*K* coding scheme indicating the class, and the network
