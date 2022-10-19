@@ -1,10 +1,9 @@
-# Sum rule
-In order to derive the rules of probability, consider the slightly more general example shown in [[Figure 1.10.png|Figure 1.10]] involving two random variables *X* and *Y*. We shall suppose that *X* can take any of the values $x_i$ where *i = 1, ..., M*, and *Y* can take the values $y_j$ where *j = 1, ...,L.* Consider a total of *N* trials in which we sample both of the variables *X* and *Y*, and let the number of such trials in which $X = x_i$ and $Y = y_j$ be $n_{ij}$. Also, let the number of trials in which *X* takes the value $x_i$ (irrespective of the value that Y takes) be denoted by $c_i$, and similarly let the number of trials in which *Y* takes the value $y_j$ be denoted by $r_j$ .
+In order to derive the rules of probability, consider the slightly more general example shown in [[Figure 1.10.png|Figure 1.10]] involving two random variables *X* and *Y*. We shall suppose that *X* can take any of the values $x_i$ where $i = 1, ..., M$, and *Y* can take the values $y_j$ where $j = 1, ...,L.$ Consider a total of *N* trials in which we sample both of the variables *X* and *Y*, and let the number of such trials in which $X = x_i$ and $Y = y_j$ be $n_{ij}$. Also, let the number of trials in which *X* takes the value $x_i$ (irrespective of the value that Y takes) be denoted by $c_i$, and similarly let the number of trials in which *Y* takes the value $y_j$ be denoted by $r_j$ .
 
 ![[Figure 1.10.png]]
 [[Figure 1.10.png|Figure 1.10]]
 
-The probability that *X* will take the value $x_i$ and Y will take the value $y_j$ is written p(X = $x_i$, Y = $y_j$) and is called the **joint** probability of X = $x_i$ and Y = $y_j$ . It is given by the number of points falling in the cell *i,j* as a fraction of the total number of points, and hence
+The probability that *X* will take the value $x_i$ and Y will take the value $y_j$ is written p(X = $x_i$, Y = $y_j$) and is called the [[joint probability]] of X = $x_i$ and Y = $y_j$ . It is given by the number of points falling in the cell *i,j* as a fraction of the total number of points, and hence
 $$
 p(X = x_i, Y = y_i) = \frac{n_{ij}}{N}
 \tag{1.5}
@@ -21,7 +20,8 @@ p(X = x_i) = \sum^L_{j = 1}p(X = x_i, Y=y_j)
 $$
 which is the **sum rule** of probability. Note that *p(X = $x_i$)* is sometimes called the [[marginal probability]], because it is obtained by marginalizing, or summing out, the other variables (in this case *Y*).
 
-If we consider only those instances for which *X* = $x_i$, then the fraction of such instances for which *Y* = $y_j$ is written *p(Y = $y_j$ |X = $x_i$)* and is called the [[conditional probability]] of *Y* = $y_j$ given X = $x_i$. It is obtained by finding the fraction of those points in column *i* that fall in cell *i,j* and hence is given by
+If we consider only those instances for which *X* = $x_i$, then the fraction of such instances for which 
+*Y* = $y_j$ is written *p(Y = $y_j$|X = $x_i$)* and is called the [[conditional probability]] of *Y* = $y_j$ given X = $x_i$. It is obtained by finding the fraction of those points in column *i* that fall in cell *i,j* and hence is given by
 $$
 p(Y = y_j|X = x_i) = \frac{n_{ij}}{c_i}
 \tag{1.8}
@@ -49,9 +49,9 @@ $$
 p(X,Y) = p(Y|X)p(X)
 \tag{1.11}
 $$
-Here *p(X,Y)* is a joint probability and is verbalized as “the probability of *X* and *Y* ”. Similarly, the quantity *p(Y |X)* is a conditional probability and is verbalized as “the probability of *Y* given *X*”, whereas the quantity *p(X)* is a marginal probability and is simply “the probability of *X*”. These two simple rules form the basis for all of the probabilistic machinery that we use throughout this book.
+Here *p(X,Y)* is a [[joint probability]] and is verbalized as “the probability of *X* and *Y* ”. Similarly, the quantity *p(Y |X)* is a [[conditional probability]] and is verbalized as “the probability of *Y* given *X*”, whereas the quantity *p(X)* is a marginal probability and is simply “the probability of *X*”. These two simple rules form the basis for all of the probabilistic machinery that we use throughout this book.
 
-From the product rule, together with the symmetry property p(X,Y) = p(Y,X), we immediately obtain the following relationship between conditional probabilities
+From the product rule, together with the symmetry property p(X,Y) = p(Y,X), we immediately obtain the following relationship between [[conditional probabilities]]
 $$
 p(Y|X) = \frac{p(X|Y)p(Y)}{p(X)}
 \tag{1.12}
