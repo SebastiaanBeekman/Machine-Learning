@@ -1,5 +1,4 @@
-The simplest linear model for regression is one that involves a linear combination of
-the input variables
+The simplest linear model for regression is one that involves a linear combination of the input variables
 $$
 y(x,w) = w_0 + w_1x_1 + ... + w_Dx_D
 \tag{3.1}
@@ -19,9 +18,7 @@ y(x,w) =\sum^{M-1}_{j=0}w_j\phi_j(x) = w^T\phi(x)
 $$
 where $w = (w_0, ..., w_{M−1})^T$ and $\phi = (\phi_0, ..., \phi_{M−1})^T.$ In many practical applications of pattern recognition, we will apply some form of fixed pre-processing, or feature extraction, to the original data variables. If the original variables comprise the vector *x*, then the features can be expressed in terms of the basis functions $\{\phi_j(x)\}$.
 
-By using nonlinear basis functions, we allow the function $y(x,w)$ to be a nonlinear
-function of the input vector **x**. Functions of the form (3.2) are called linear models, however, because this function is linear in **w**. It is this linearity in the parameters
-that will greatly simplify the analysis of this class of models. However, it also leads to some significant limitations, as we discuss in [[Section 3.6]].
+By using nonlinear basis functions, we allow the function $y(x,w)$ to be a nonlinear function of the input vector **x**. Functions of the form (3.2) are called linear models, however, because this function is linear in **w**. It is this linearity in the parameters that will greatly simplify the analysis of this class of models. However, it also leads to some significant limitations, as we discuss in [[Section 3.6]].
 
 The example of polynomial regression considered in [[Introduction|Chapter 1]] is a particular example of this model in which there is a single input variable x, and the basis functions take the form of powers of *x* so that $\phi_j(x) = x^j$ . One limitation of polynomial basis functions is that they are global functions of the input variable, so that changes in one region of input space affect all other regions. This can be resolved by dividing the input space up into regions and fit a different polynomial in each region, leading to [[spline functions]] (Hastie et al., 2001).
 

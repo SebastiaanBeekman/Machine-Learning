@@ -1,4 +1,3 @@
-# Linear Models for Classification
 
 ## Index
 - [[Discriminant Functions]]
