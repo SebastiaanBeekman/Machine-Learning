@@ -1,4 +1,4 @@
-We turn next to a probabilistic view of classification and show how models with linear decision boundaries arise from simple assumptions about the distribution of the data. In [[4. Inference and decision|Section 1.5.4]], we discussed the distinction between the discriminative and the generative approaches to classification. Here we shall adopt a generative approach in which we model the class-conditional densities p(x|Ck), as well as the class priors p(Ck), and then use these to compute posterior probabilities p(Ck|x) through Bayes’ theorem.
+We turn next to a probabilistic view of classification and show how models with linear decision boundaries arise from simple assumptions about the distribution of the data. In [[4. Inference and decision|Section 1.5.4]], we discussed the distinction between the discriminative and the generative approaches to classification. Here we shall adopt a generative approach in which we model the class-conditional densities $p(x|C_k)$, as well as the class priors $p(C_k)$, and then use these to compute posterior probabilities $p(C_k|x)$ through Bayes’ theorem.
 
 Consider first of all the case of two classes. The posterior probability for class $C_1$ can be written as
 $$
@@ -28,12 +28,12 @@ $$
 a = \ln{\frac{\sigma}{1 - \sigma}}
 \tag{4.61}
 $$
-and is known as the logit function. It represents the log of the ratio of probabilities ln $[p(C1|x)/p(C2|x)]$ for the two classes, also known as the log odds.
+and is known as the logit function. It represents the log of the ratio of probabilities ln $[p(C1|x)/p(C2|x)]$ for the two classes, also known as the [[log odds]].
 
 ![[Figure 4.9.png]]
 [[Figure 4.9.png|Figure 4.9]]
 
-Note that in (4.57) we have simply rewritten the [[posterior probabilities]] in an equivalent form, and so the appearance of the logistic sigmoid may seem rather vacuous. However, it will have significance provided *a(x)* takes a simple functional form. We shall shortly consider situations in which *a(x)* is a linear function of *x*, in which case the [[posterior probability]] is governed by a generalized linear model. For the case of *K >2* classes, we have
+Note that in (4.57) we have simply rewritten the [[posterior probabilities]] in an equivalent form, and so the appearance of the logistic sigmoid may seem rather vacuous. However, it will have significance provided *a(x)* takes a simple functional form. We shall shortly consider situations in which *a(x)* is a linear function of *x*, in which case the [[posterior probability]] is governed by a generalized linear model. For the case of *K > 2* classes, we have
 $$
 \begin{align}
 p(C_k|x) = \frac{p(x|C_k)p(C_k)}{\sum_jp(x|C_j)p(C_j)} \\

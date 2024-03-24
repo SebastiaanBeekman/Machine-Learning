@@ -22,9 +22,7 @@ $$
 \frac{t_ny(x_n)}{||w||} = \frac{t_n(w^T\phi(x_n)+b)}{||w||}
 \tag{7.2}
 $$
-The margin is given by the perpendicular distance to the closest point $x_n$ from the
-data set, and we wish to optimize the parameters *w* and *b* in order to maximize this
-distance. Thus the maximum margin solution is found by solving
+The margin is given by the perpendicular distance to the closest point $x_n$ from the data set, and we wish to optimize the parameters *w* and *b* in order to maximize this distance. Thus the maximum margin solution is found by solving
 $$
 arg\ max_{w,b}\ \{\frac{1}{||w||}min_n[t_n(w^T\phi(x_n) + b]\}
 \tag{7.3}
@@ -34,8 +32,7 @@ $$
 t_n(w^T\phi(x_n) + b) = 1
 \tag{7.4}
 $$
-for the point that is closest to the surface. In this case, all data points will satisfy the
-constraints
+for the point that is closest to the surface. In this case, all data points will satisfy the constraints
 $$
 t_n(w^T\phi(x_n) + b) \geq 1, n = 1,...,N
 \tag{7.5}
